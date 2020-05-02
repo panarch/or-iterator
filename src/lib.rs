@@ -1,3 +1,19 @@
+//! # Examples
+//!
+//! ```
+//! use or_iterator::OrIterator;
+//!
+//! let v1 = vec![1, 2, 3];
+//! let v2 = vec![4, 5];
+//! let or = v1.iter().or(v2.iter());
+//! assert_eq!(3, or.count());
+//!
+//! let v1 = vec![];
+//! let v2 = vec![4, 5];
+//! let or = v1.iter().or(v2.iter());
+//! assert_eq!(2, or.count());
+//! ```
+
 use core::cmp::max;
 
 pub trait OrIterator: Sized {
